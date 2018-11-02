@@ -1,13 +1,13 @@
 class Spaceship extends Floater  
 {   
-  abstract public void setX(int x);  
-  abstract public int getX();   
-  abstract public void setY(int y);   
-  abstract public int getY();   
-  abstract public void setDirectionX(double x);   
-  abstract public double getDirectionX();   
-  abstract public void setDirectionY(double y);   
-  abstract public double getDirectionY();   
-  abstract public void setPointDirection(int degrees);   
-  abstract public double getPointDirection(); 
+  public void setX(int x);  
+  public int getX();   
+  public void setY(int y);   
+  public int getY();   
+  public void setDirectionX(double x){myDirectionX = x;}   
+  public double getDirectionX() {return myDirectionX;}
+  public void setDirectionY(double y){myDirectionY = y;}   
+  public double getDirectionY(){return myDirectionY;}
+  public void setPointDirection(int degrees){myPointDirection =(int) degrees;}                                        
+  public double getPointDirection(){return myPointDirection;} 
 }
