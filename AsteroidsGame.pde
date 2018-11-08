@@ -1,7 +1,7 @@
 //your variable declarations here
 public void setup() 
 {
-  //your code here
+  size(600, 600);
 }
 public void draw() 
 {
