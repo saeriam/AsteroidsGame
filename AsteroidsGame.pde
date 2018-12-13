@@ -22,14 +22,14 @@ for (int i = 0; i < shiny.length; i++){
  public void keyPressed()
 {
   if (key == 'a')
-    marisa.turn (-5);
+    marisa.turn (-7);
   if (key == 'd')
-    marisa.turn (5);
+    marisa.turn (7);
   if (key == 'w')
     marisa.accelerate(2.5);
   if (key == 's')
     marisa.accelerate(-2.5);
-  if (key == 'h')
+  if (key == 'c')
   {
     marisa.setX((int)(Math.random()*500));
     marisa.setY((int)(Math.random()*500));
