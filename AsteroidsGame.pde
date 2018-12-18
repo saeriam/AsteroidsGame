@@ -1,5 +1,7 @@
 //your variable declarations here
 Spaceship marisa;
+ArrayList <Asteroid> ashteroid;
+int numAshteroid = (int) (Math.random()*10);
 Star shiny [] = new Star[100];
 public void setup() 
 {
@@ -8,6 +10,11 @@ public void setup()
     for (int i = 0; i < shiny.length; i++){
       shiny[i] = new Star();
     }
+    ashteroid = new ArrayList<Asteroid>();
+  for (int i = 0; i < numAshteroid; i++) {
+    ashteroid.add(new Asteroid());
+    ashteroid.get(i).accelerate(Math.random() * 0.3);    
+  }
 }
 public void draw() 
 {
@@ -17,6 +24,11 @@ for (int i = 0; i < shiny.length; i++){
 }
   marisa.show();
   marisa.move();
+   for (int a = 0; a < ashteroid.size(); a++) {
+    ashteroid.get(a).show();
+    ashteroid.get(a).turn(1);
+    ashteroid.get(a).move();
+   }
 }
 
  public void keyPressed()
