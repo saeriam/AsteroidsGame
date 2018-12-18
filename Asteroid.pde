@@ -1,4 +1,4 @@
-class Asteroid extends Floater{
+class Asteroid extends Floater implements Collidable{
   private double rotationSpeed;
   public void setX(int x){myCenterX = x;} 
   public int getX(){return (int) myCenterX;}   
@@ -55,5 +55,41 @@ class Asteroid extends Floater{
     else if (myCenterY < -myRadius) {
       myCenterY = height + myRadius;
     }
+  }
+   public double[] getXVertices(){
+    int[] xCorners = new int[19];
+    double[] doubleXCorners = new double[19];
+    xCorners[0] = -12;
+    yCorners[0] = 5;
+    xCorners[1] = 0;
+    yCorners[1] = -14;
+    xCorners[2] = 9;
+    yCorners[2] = -5;
+    xCorners[3] = 8;
+    yCorners[3] = 8;
+    xCorners[4] = -8;
+    yCorners[4] = 8;
+  for (int i = 0; i < 19; i++){
+    doubleXCorners[i] = (double) xCorners[i] + this.myCenterX;
+}
+return doubleXCorners;
+  }
+  public double[] getYVertices(){
+    int[] yCorners = new int[19];
+    double[] doubleYCorners = new double[19];
+    xCorners[0] = -12;
+    yCorners[0] = 5;
+    xCorners[1] = 0;
+    yCorners[1] = -14;
+    xCorners[2] = 9;
+    yCorners[2] = -5;
+    xCorners[3] = 8;
+    yCorners[3] = 8;
+    xCorners[4] = -8;
+    yCorners[4] = 8;
+for (int i = 0; i < 19 ; i++){
+  doubleYCorners[i] = (double) xCorners[i] + this.myCenterX;
+}
+return doubleYCorners;
   }
 }

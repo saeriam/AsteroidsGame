@@ -4,6 +4,7 @@ ArrayList <Asteroid> ashteroid;
 int numAshteroid = (int) ((Math.random()*10)+5);
 ArrayList<Bullet> bullets;
 Bullet bullet;
+CollisionHandler handy;
 Star shiny [] = new Star[100];
 public void setup() 
 {
@@ -19,6 +20,7 @@ public void setup()
   }
   bullets = new ArrayList<Bullet>();
   bullet = new Bullet (marisa);
+  handy = new CollisionHandler();
 }
 public void draw() 
 {
@@ -65,7 +67,7 @@ public void keyPressed()
     marisa.accelerate(1.5);
   if (key == 's')
     marisa.accelerate(-1.5);
-  if (key == 'c')
+  if (key == 'h')
   {
     marisa.setX((int)(Math.random()*500));
     marisa.setY((int)(Math.random()*500));
