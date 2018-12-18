@@ -10,6 +10,8 @@ class Asteroid extends Floater{
   public double getDirectionY(){return myDirectionY;}
   public void setPointDirection(int degrees){myPointDirection =(int) degrees;}                                        
   public double getPointDirection(){return myPointDirection;}
+  public float getRadius() {return myRadius;}
+
   private int myRadius;
   public Asteroid () {
     myColor = #C6D4F0;
