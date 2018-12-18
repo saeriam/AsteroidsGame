@@ -1,5 +1,5 @@
-class Spaceship extends Floater implements Collidable  
-{   
+class Spaceship extends Floater   
+{  //implements Collidable 
   public void setX(int x){myCenterX = x;} 
   public int getX(){return (int) myCenterX;}   
   public void setY(int y){myCenterY = y;}   
@@ -65,102 +65,102 @@ class Spaceship extends Floater implements Collidable
     yCorners[19] = -3;
     
   }
-  public double[] getXVertices(){
-    int[] xCorners = new int[19];
-    double[] doubleXCorners = new double[19];
-    xCorners[0] = 18;
-    yCorners[0] = 0;
-    xCorners[1] = 4;
-    yCorners[1] = 3;
-    xCorners[2] = 4;
-    yCorners[2] = 9;
-    xCorners[3] = 15;
-    yCorners[3] = 9;
-    xCorners[4] = 9;
-    yCorners[4] = 10;
-    xCorners[5] = 0;
-    yCorners[5] = 18;
-    xCorners[6] = 3;
-    yCorners[6] = 13;
-    xCorners[7] = -7;
-    yCorners[7] = 18; 
-    xCorners[8] = 0;
-    yCorners [8] = 10;
-    xCorners[9] = -3;
-    yCorners[9] = 4;
-    xCorners[10] = -12;
-    yCorners[10] = 0;
-    xCorners[11] = -3;
-    yCorners[11] = -4;
-    xCorners[12] = 0;
-    yCorners[12] = -10; 
-    xCorners[13] = -7;
-    yCorners[13] = -18; 
-    xCorners[14] = 3; 
-    yCorners[14] = -13;
-    xCorners[15] = 0; 
-    yCorners[15] = -18;
-    xCorners[16] = 9;
-    yCorners[16] = -10; 
-    xCorners[17] = 15;
-    yCorners[17] = -9;
-    xCorners[18] = 4;
-    yCorners[18] = -9;
-    xCorners[19] = 4;
-    yCorners[19] = -3;
+//  public double[] getXVertices(){
+//    int[] xCorners = new int[19];
+//    double[] doubleXCorners = new double[19];
+//    xCorners[0] = 18;
+//    yCorners[0] = 0;
+//    xCorners[1] = 4;
+//    yCorners[1] = 3;
+//    xCorners[2] = 4;
+//    yCorners[2] = 9;
+//    xCorners[3] = 15;
+//    yCorners[3] = 9;
+//    xCorners[4] = 9;
+//    yCorners[4] = 10;
+//    xCorners[5] = 0;
+//    yCorners[5] = 18;
+//    xCorners[6] = 3;
+//    yCorners[6] = 13;
+//    xCorners[7] = -7;
+//    yCorners[7] = 18; 
+//    xCorners[8] = 0;
+//    yCorners [8] = 10;
+//    xCorners[9] = -3;
+//    yCorners[9] = 4;
+//    xCorners[10] = -12;
+//    yCorners[10] = 0;
+//    xCorners[11] = -3;
+//    yCorners[11] = -4;
+//    xCorners[12] = 0;
+//    yCorners[12] = -10; 
+//    xCorners[13] = -7;
+//    yCorners[13] = -18; 
+//    xCorners[14] = 3; 
+//    yCorners[14] = -13;
+//    xCorners[15] = 0; 
+//    yCorners[15] = -18;
+//    xCorners[16] = 9;
+//    yCorners[16] = -10; 
+//    xCorners[17] = 15;
+//    yCorners[17] = -9;
+//    xCorners[18] = 4;
+//    yCorners[18] = -9;
+//    xCorners[19] = 4;
+//    yCorners[19] = -3;
     
-  for (int i = 0; i < 19; i++){
-    doubleXCorners[i] = (double) xCorners[i] + this.myCenterX;
-}
-return doubleXCorners;
-  }
-  public double[] getYVertices(){
-    int[] yCorners = new int[19];
-    double[] doubleYCorners = new double[19];
-    xCorners[0] = 18;
-    yCorners[0] = 0;
-    xCorners[1] = 4;
-    yCorners[1] = 3;
-    xCorners[2] = 4;
-    yCorners[2] = 9;
-    xCorners[3] = 15;
-    yCorners[3] = 9;
-    xCorners[4] = 9;
-    yCorners[4] = 10;
-    xCorners[5] = 0;
-    yCorners[5] = 18;
-    xCorners[6] = 3;
-    yCorners[6] = 13;
-    xCorners[7] = -7;
-    yCorners[7] = 18; 
-    xCorners[8] = 0;
-    yCorners [8] = 10;
-    xCorners[9] = -3;
-    yCorners[9] = 4;
-    xCorners[10] = -12;
-    yCorners[10] = 0;
-    xCorners[11] = -3;
-    yCorners[11] = -4;
-    xCorners[12] = 0;
-    yCorners[12] = -10; 
-    xCorners[13] = -7;
-    yCorners[13] = -18; 
-    xCorners[14] = 3; 
-    yCorners[14] = -13;
-    xCorners[15] = 0; 
-    yCorners[15] = -18;
-    xCorners[16] = 9;
-    yCorners[16] = -10; 
-    xCorners[17] = 15;
-    yCorners[17] = -9;
-    xCorners[18] = 4;
-    yCorners[18] = -9;
-    xCorners[19] = 4;
-    yCorners[19] = -3;
-for (int i = 0; i < 19 ; i++){
-  doubleYCorners[i] = (double) yCorners[i] + this.myCenterY;
-}
-return doubleYCorners;
-  }
+//  for (int i = 0; i < 19; i++){
+//    doubleXCorners[i] = (double) xCorners[i] + this.myCenterX;
+//}
+//return doubleXCorners;
+//  }
+//  public double[] getYVertices(){
+//    int[] yCorners = new int[19];
+//    double[] doubleYCorners = new double[19];
+//    xCorners[0] = 18;
+//    yCorners[0] = 0;
+//    xCorners[1] = 4;
+//    yCorners[1] = 3;
+//    xCorners[2] = 4;
+//    yCorners[2] = 9;
+//    xCorners[3] = 15;
+//    yCorners[3] = 9;
+//    xCorners[4] = 9;
+//    yCorners[4] = 10;
+//    xCorners[5] = 0;
+//    yCorners[5] = 18;
+//    xCorners[6] = 3;
+//    yCorners[6] = 13;
+//    xCorners[7] = -7;
+//    yCorners[7] = 18; 
+//    xCorners[8] = 0;
+//    yCorners [8] = 10;
+//    xCorners[9] = -3;
+//    yCorners[9] = 4;
+//    xCorners[10] = -12;
+//    yCorners[10] = 0;
+//    xCorners[11] = -3;
+//    yCorners[11] = -4;
+//    xCorners[12] = 0;
+//    yCorners[12] = -10; 
+//    xCorners[13] = -7;
+//    yCorners[13] = -18; 
+//    xCorners[14] = 3; 
+//    yCorners[14] = -13;
+//    xCorners[15] = 0; 
+//    yCorners[15] = -18;
+//    xCorners[16] = 9;
+//    yCorners[16] = -10; 
+//    xCorners[17] = 15;
+//    yCorners[17] = -9;
+//    xCorners[18] = 4;
+//    yCorners[18] = -9;
+//    xCorners[19] = 4;
+//    yCorners[19] = -3;
+//for (int i = 0; i < 19 ; i++){
+//  doubleYCorners[i] = (double) yCorners[i] + this.myCenterY;
+//}
+//return doubleYCorners;
+//  }
   
   }
